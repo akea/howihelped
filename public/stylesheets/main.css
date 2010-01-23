@@ -1,0 +1,2258 @@
+/*
+http://meyerweb.com/tools/css/reset
+reset v1.0 | 20080212
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: .625em; /* 10px */
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+	text-decoration: underline;
+}
+
+#header #session {
+	font-size: 1.3em;
+	color: #FFF;
+}
+
+#header #session a {
+	color: #FFF;
+}
+
+#header #session #user a {
+	font-weight: bold;
+}
+
+#content h2 {
+	color: #333;
+	font-size: 2.3em;
+	font-weight: bold;
+}
+
+#content p {
+	font-size: 1.6em;
+}
+
+#content ul.actions {
+	font-size: 1.3em;
+}
+
+#content a {
+	color: #145597;
+}
+
+#content #main .count,
+#content #main .meta,
+#content #main .credit {
+	color: #95a3ab;
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+#content #main h3 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: normal;
+	line-height: 1.4;
+	font-size: 3.3em;
+	color: #232323;
+}
+
+.modal.twitter_accounts-new #content #main h3 {
+  text-align: center;
+	font-size: 2.4em;
+	color: #677387;
+	font-weight: 100;
+}
+
+#content #main h4 {
+	font-size: 2.4em;
+	color: #677387;
+	font-weight: 100;
+}
+
+#content #main ul#comments {
+	font-size: 1.3em;
+	line-height: 1.4;
+}
+
+#content #main #comments .author {
+	line-height: 1;
+}
+
+#content #main #comments .author span {
+	color: #5e676a;
+}
+
+/* dashboard style listings */
+
+.wide #content #main h3 {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 40px;
+	background: #f5f7f9;
+	font-size: 1.2em;
+	color: #232323;
+	font-weight: bold;
+	border-top: 1px solid #e2e4e5;
+}
+
+.wide #content #main h3 a,
+.wide #content #main h3 a:visited {
+	color: inherit;
+}
+
+.wide #content #main ul, 
+.wide #content #main .blankslate {
+	border-top: 1px solid #e2e4e5;
+}
+
+.wide #content #main ul li .mention a {
+	font-size: 1em;
+}
+
+.wide #content #main li.message .mention,
+.wide #content #main li.message_reply .mention,
+.wide #content #main li.message_comment .mention {
+	font-size: 1.2em;
+}
+.wide #content #main li.comment .mention em {
+	color: #8B8B8B;
+	font-style: normal;
+}
+
+.wide #content #main .mention {
+	width:66%;
+}
+
+.wide #content #main .date {
+	color: #a2a2a2;
+	float: right;
+	font-size: 1.1em;
+	padding: 0 10px 0 0;
+	text-align: right;
+}
+
+.wide #content #sidebar ul {
+	margin: 0 0 2em 0;
+	border-top: 1px solid #e2e4e5;
+}
+
+.wide #content #sidebar ul li {
+	clear: both;
+	overflow: auto; /* replace with proper clearfix */
+	padding: 0 10px;
+	font-size: 1.3em;
+	font-weight: bold;
+	line-height: 40px;
+	background: #f5f7f9;
+	border-bottom: 1px solid #e2e4e5;
+}
+
+.wide #content #sidebar ul li img {
+	outline: solid 1px #d7d7d7;
+	border: 2px solid #FFF;
+	vertical-align: middle;
+	margin: 0 10px 0 0;
+}
+
+.wide #content #sidebar ul li a {
+	float: left;
+}
+
+.wide #content #sidebar ul li a.edit {
+	float: right;
+}
+
+.wide #content #sidebar ul li span {
+	float: right;
+}
+
+.wide #content #sidebar ul li .up {
+	background: url(../images/icons/brands/up.gif) 0 50% no-repeat;
+	color: #42ae13;
+	padding: 0 0 0 11px;
+}
+.wide #content #sidebar ul li .down {
+	background: url(../images/icons/brands/down.gif) 0 50% no-repeat;
+	color: #c50000;
+	padding: 0 0 0 11px;
+}
+
+.wide #content h2 span a {
+	font-size: 0.9em;
+	float: right;
+}
+
+.users-new #content,
+.plans-edit #content {
+  padding: 25px 0 0 0;
+}
+
+.plans-edit #content #wrap #main form {
+  padding: 0;
+}
+
+.plans-edit #content #wrap #main form #billing-fields {
+  padding: 0 15px;
+}
+
+.plans-edit #content #wrap #main form .buttons {
+  padding: 0 0 3em 15px;
+}
+
+.plans-edit #content #wrap #main h2 {
+  padding: 0 15px;
+  margin: 0;
+  width: auto;
+}
+
+.users-new #content #wrap #main h2, 
+.plans-edit #content #wrap #main h2 {
+  padding: 20px 0 0 0;
+  color: #34444f;
+  margin: 0 15px;
+  line-height: 1;
+  font-size: 3.2em;
+  font-weight: bold;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.users-new #content #wrap #main h3, 
+.plans-edit #content #wrap #main h3 {
+  padding: 0;
+  margin: 0 15px;
+  line-height: 1.4;
+  font-size: 1.3em;
+  font-weight: bold;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.modal #content #wrap #main p,
+.modal #content #wrap #main ul,
+.modal #content #wrap #main ol {
+  line-height: 1.4;
+	font-size: 1.3em;
+  margin: 0 0 1.4em 0;
+}
+
+.modal #content #wrap #main ul {
+  padding: 0 0 0 1em;
+  list-style-type: square;
+}
+
+.modal #content #wrap #main ol {
+  padding: 0 0 0 2em;
+  list-style-type: decimal;
+}
+
+.users-new #content #wrap #main p,
+.plans-edit #content #wrap #main p {
+  padding: 0;
+  margin: 0 15px 1em 15px;
+}
+
+.users-new #content #wrap #main p.new-account-help-text, 
+.plans-edit #content #wrap #main p.new-account-help-text {
+	color: #98a1a8;
+}
+
+#content #wrap #main .rule {
+	padding: 3em 0 0 0;
+	margin: 0 15px 3em 15px;
+	border-bottom: 1px solid #e8e8e8;
+}
+
+.users-new #content #wrap #main .rule, 
+.plans-edit #content #wrap #main .rule {
+	padding: 3em 0 0 0;
+	margin: 0 15px 3em 15px;
+	border-bottom: 1px solid #e8e8e8;
+}
+
+
+#header h1 {
+  float: left;
+}
+
+#header ul#session {
+  float: right;
+}
+
+#header ul#navigation {
+  clear: both;
+}
+
+* html #header ul#navigation { height: 1%; }
+*:first-child+html #header ul#navigation { min-height: 1px; }
+#header ul#navigation:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+#header li {
+  float: left;
+}
+
+#header li#users,
+#header li#settings {
+  float: right;
+}
+
+#content {
+  clear: both;
+}
+
+#content h2 {
+  float: left;
+}
+
+#content .actions {
+  float: right;
+}
+
+#content #main {
+  clear: both;
+}
+
+#content #main ul li {
+  clear: left;
+}
+
+* html #content #main ul li { height: 1%; }
+*:first-child+html #content #main ul li { min-height: 1px; }
+#content #main ul li:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+#content #main ul li.ignored, #content #main ul li.resolved {
+  border-bottom: 1px solid #dddfe0;
+}
+
+#content #main ul li .mention {
+  float: left;
+}
+
+#content #main ul li .mention span {
+  display: block;
+}
+
+#content #main ul li ul {
+  float: right;
+}
+
+#content #main ul li ul li {
+  float: left;
+  clear: none;
+}
+
+/* messages page */
+
+* html #main { height: 1%; }
+*:first-child+html #main { min-height: 1px; }
+#main:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+#message_discussion {
+  width: 75%;
+  float: left;
+}
+
+#message_state {
+  width: 25%;
+  float: left;
+}
+
+*:first-child+html #message_state {
+  width: 24%;
+}
+
+/* message page comments */
+
+#content .discussion ul#comments li img {
+  float: left;
+}
+
+#content .discussion ul#comments li .comment {
+  float: left;
+  width: 85%;
+}
+
+#content .discussion ul#comments .author {
+  float: left;
+}
+
+/* accounts show page */
+
+.wide #content #wrap {
+  margin: 0 15px;
+}
+
+.wide #content #main {
+  width: 66%;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+.wide #content h2 {
+  float: none;
+  margin: 0;
+  line-height: 1.2;
+  padding: 0 10px;
+  font-size: 1.6em;
+  color: #95a3ab;
+}
+
+.wide #content #wrap,
+.widgets #content #wrap,
+.users #content #wrap,
+.brands #content #wrap {
+  padding-top: 15px;
+}
+
+.modal #content #wrap {
+  padding-top: 0;
+}
+
+.brand_header {
+  padding: 8px 0;
+}
+
+.wide #content .brand_header  h2 {
+  float: left;
+  width: 40%;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.wide #content #brands h2 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.brand_header span {
+  float: right;
+  display: block;
+  width: 45%;
+  text-align: right;
+  font-size: 1.6em;  
+  padding: 0 10px 0 0;  
+  font-weight: bold;
+}
+
+.wide #content #sidebar {
+  width: 33%;
+  float: right;
+}
+
+.wide #content #sidebar #brands {
+  background: #FFF;
+  padding: 0 0 9px 0;
+  margin: 0 0 10px 0;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+}
+
+.wide #content #sidebar #brands .google_chart {
+  text-align: center;
+  overflow: hidden;
+}
+
+.wide #content #sidebar p {
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.dashboard_new_brand {
+  padding: 9px 0;
+  background: #FFF;
+  margin: 0 0 10px 0;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+  }
+
+.dashboard_new_brand a {
+  font-size: 1.6em;
+  font-weight: bold;
+  padding: 6px 0 5px 50px;
+  display: block;
+  background: #fff url(../images/icons/brands/add_brand.png) 16px center no-repeat;
+}
+
+.wide #footer {
+  padding: 15px;
+  clear: both;
+}
+
+.widgets p {
+  font-size: 1.3em;
+}
+
+.widgets #main #record_list h3 {
+  font-size: 2.2em;
+}
+
+.widgets pre {
+  font-size: 1.5em;
+  margin-left: 10px;
+}
+
+.widgets #thunderthimble {
+  font-size: 1.3em;
+  margin-left: 10px;
+  width: 500px;
+}
+
+.widgets #thunderthimble li {
+  padding: 5px 0;
+}
+
+
+body {
+	background: #dde6eb; /* see #content */
+	min-width: 750px;
+}
+
+#header {
+	background: #28343e url(../images/header.png) 0 0 repeat-x;
+}
+
+#header h1 a {
+	width: 312px;
+	height: 49px;
+	display: block;
+	text-indent: -9999px;
+	text-decoration: none;
+	background: url(../images/logo.png) 0 0 no-repeat;
+	margin-left: 11px; /* #header #navigation padding-left - 4px */
+}
+
+#header #session {
+	margin: 26px 15px 0 0;
+}
+
+#header #session li {
+	margin-left: 15px;
+}
+
+#header #session li#destroy_session {
+	padding: 0 0 0 20px;
+	background: url(../images/icons/destroy_session.png) 0 0 no-repeat;
+}
+
+#header #navigation {
+	height: 71px;
+	padding: 0 15px;
+	background: #05446c url(../images/navigation.png) 0 0 repeat-x;
+}
+
+#header #navigation li a {
+	margin-right: 5px;
+	margin-top: 15px;
+	height: 41px;
+	display: block;
+	text-indent: -9999px;
+	text-decoration: none;
+}
+
+#header #navigation li#dashboard a {
+	width: 141px;
+	background: url(../images/buttons/navigation/dashboard.png) 0 0 no-repeat;
+}
+#header #navigation li#dashboard a:hover,
+#header #navigation li#dashboard a:focus {
+	background: url(../images/buttons/navigation/dashboard.png) 0 -41px no-repeat;
+}
+#header #navigation li#dashboard a:active,
+.accounts-show #header #navigation li#dashboard a {
+	background: url(../images/buttons/navigation/dashboard.png) 0 -82px no-repeat;
+}
+
+#header #navigation li#buzz a {
+	width: 98px;
+	background: url(../images/buttons/navigation/buzz.png) 0 0 no-repeat;
+}
+#header #navigation li#buzz a:hover,
+#header #navigation li#buzz a:focus {
+	background: url(../images/buttons/navigation/buzz.png) 0 -41px no-repeat;
+}
+#header #navigation li#buzz a:active,
+.brands #header #navigation li#buzz a {
+	background: url(../images/buttons/navigation/buzz.png) 0 -82px no-repeat;
+}
+
+
+#header #navigation li#brands a {
+	width: 100px;
+	background: url(../images/buttons/navigation/brands.png) 0 0 no-repeat;
+}
+#header #navigation li#brands a:hover,
+#header #navigation li#brands a:focus {
+	background: url(../images/buttons/navigation/brands.png) 0 -41px no-repeat;
+}
+#header #navigation li#brands a:active,
+.brands #header #navigation li#brands a {
+	background: url(../images/buttons/navigation/brands.png) 0 -82px no-repeat;
+}
+
+
+#header #navigation li#discussions a {
+	width: 148px;
+	background: url(../images/buttons/navigation/discussions.png) 0 0 no-repeat;
+}
+
+#header #navigation li#discussions a:hover,
+#header #navigation li#discussions a:focus {
+	background: url(../images/buttons/navigation/discussions.png) 0 -41px no-repeat;
+}
+#header #navigation li#discussions a:active,
+.messages #header #navigation li#discussions a {
+	background: url(../images/buttons/navigation/discussions.png) 0 -82px no-repeat;
+}
+
+
+#header #navigation li#users a {
+	width: 106px;
+	background: url(../images/buttons/navigation/users.png) 0 0 no-repeat;
+}
+#header #navigation li#users a:hover,
+#header #navigation li#users a:focus {
+	background: url(../images/buttons/navigation/users.png) 0 -41px no-repeat;
+}
+#header #navigation li#users a:active,
+.users #header #navigation li#users a {
+	background: url(../images/buttons/navigation/users.png) 0 -82px no-repeat;
+}
+
+#header #navigation li#settings a {
+	width: 118px;
+	margin-right: 0;
+	background: url(../images/buttons/navigation/settings.png) 0 0 no-repeat;
+}
+#header #navigation li#settings a:hover,
+#header #navigation li#settings a:focus {
+	background: url(../images/buttons/navigation/settings.png) 0 -41px no-repeat;
+}
+#header #navigation li#settings a:active,
+.accounts-edit #header #navigation li#settings a {
+	background: url(../images/buttons/navigation/settings.png) 0 -82px no-repeat;
+}
+
+
+#content {
+	background: #dde6eb url(../images/content.png) 0 0 repeat-x;
+	padding-top: 20px;
+}
+
+#content h2,
+#content ul.actions {
+	line-height: 56px;
+	margin: 0 15px;
+}
+
+#content #main p {
+	padding: 10px 10px 0px 10px;
+	margin: 10px 0;
+}
+
+#content ul.actions #brand_settings a{
+	display: block;
+	padding: 0 0 0 26px;
+	background: url(../images/icons/settings.png) 0 50% no-repeat;
+}
+
+/* brand index page -|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|- */
+
+#main {
+	margin: 0 15px 15px 15px;
+	padding: 0 0 10px 0;
+	background: #FFF;
+	-moz-border-radius: 9px;
+	-webkit-border-radius: 9px;
+}
+
+#main .count {
+	display: block;
+	padding: 0 10px;
+	line-height: 28px;
+	border-bottom: 1px solid #ededed;
+}
+
+#main ul li {
+	border-bottom: 1px solid #ededed;
+	padding: 7px 0 7px 95px;
+}
+
+#main ul li .mention a {
+	line-height: 1.3;
+	font-size: 1.3em;
+	text-decoration: none;
+	color: #434343;
+}
+
+#main ul li .mention a:hover {
+  text-decoration: underline;
+}
+
+#content #main ul li .mention span.inline_date{
+  color: #9da1a5;	font-size: .9em;
+  display: inline;
+}
+
+#main ul li.message .mention img {
+	width: 24px;
+	height: 24px;
+}
+
+
+#main ul li.resolved .mention a, 
+#main ul li.ignored .mention a {
+	color: #888;
+}
+
+#main ul li .mention span {
+	font-size: 1.1em;
+	color: #a2a2a2;
+}
+
+#main ul li ul li {
+	border: none;
+	margin-right: 10px;
+	padding: 0;
+}
+
+#main ul li ul li a,
+#main ul li.resolved ul li, 
+#main ul li.ignored ul li {
+	height: 27px;
+	display: block;
+	text-indent: -9999px;
+	text-decoration: none;
+}
+
+#main ul li ul li.comments a {
+	color: #49786f;
+	text-indent: 0;
+	line-height: 27px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+#main ul li.resolved ul li.comments a, 
+#main ul li.ignored ul li.comments a {
+	color: #BFBFBF;
+}
+
+#main ul li ul li.flag a {
+	width: 73px;
+	background: url(../images/buttons/messages/flag.html) 0 0 no-repeat;
+}
+
+#main ul li.resolved ul li.flag, 
+#main ul li.ignored ul li.flag {
+	width: 73px;
+	background: url(../images/buttons/messages/flag_resolved.html) 0 0 no-repeat;
+}
+
+#main ul li ul li.rate_positive {
+	width: 62px;
+	/* background: url(/images/buttons/messages/positive_negative.png) 0 -27px no-repeat; */
+}
+#main ul li.positive ul li.rate_positive {
+	width: 62px;
+	/*  background: url(/images/buttons/messages/positive_negative.png) 0 0 no-repeat; */
+}
+#main ul li.positive.resolved ul li.rate_positive, 
+#main ul li.positive.ignored ul li.rate_positive {
+	width: 62px;
+	/*  background: url(/images/buttons/messages/positive_negative.png) 0 -54px no-repeat; */
+}
+#main ul li.resolved ul li.rate_positive, 
+#main ul li.ignored ul li.rate_positive {
+	width: 62px;
+	/*  background: url(/images/buttons/messages/positive_negative.png) 0 -81px no-repeat; */
+}
+
+
+#main ul li ul li.rate_negative {
+	width: 62px;
+	/*  background: url(/images/buttons/messages/positive_negative.png) -62px -27px no-repeat; */
+}
+#main ul li.negative ul li.rate_negative {
+	width: 62px;
+	/* background: url(/images/buttons/messages/positive_negative.png) -62px 0 no-repeat; */
+}
+#main ul li.negative.resolved ul li.rate_negative, 
+#main ul li.negative.ignored ul li.rate_negative {
+	width: 62px;
+	 /* background: url(/images/buttons/messages/positive_negative.png) -62px -54px no-repeat; */
+}
+#main ul li.resolved ul li.rate_negative, 
+#main ul li.ignored ul li.rate_negative {
+	width: 62px;
+	/* background: url(/images/buttons/messages/positive_negative.png) -62px -81px no-repeat; */
+}
+
+#main ul li ul li.dismiss a {
+	width: 83px;
+	background: url(../images/buttons/messages/dismiss.png) 0 0 no-repeat;
+}
+
+#main ul li.resolved ul li.dismiss a, 
+#main ul li.ignored ul li.dismiss a {
+	width: 83px;
+	background: url(../images/buttons/messages/dismiss_resolved.png) 0 0 no-repeat;
+}
+
+#main ul li.message {
+	background: url(../images/icons/messages/tweet_small.png) 10px 9px no-repeat;
+}
+
+#main ul li.message.resolved, 
+#main ul li.message.ignored {
+	background: #edeff1 url(../images/icons/messages/tweet_resolved.png) 10px 9px no-repeat;
+}
+
+body.brands-show #main ul li.message.ignored,
+body.accounts-show #main ul li.message.ignored {
+  display: none;
+}
+
+#main ul li.video {
+	background: url(../images/icons/messages/video.png) 10px 7px no-repeat;
+}
+
+#main ul li.video.resolved, 
+#main ul li.video.ignored {
+	background: #edeff1 url(../images/icons/messages/video_resolved.png) 10px 7px no-repeat;
+}
+
+#main ul li.blog {
+	background: url(../images/icons/messages/blog.png) 10px 7px no-repeat;
+}
+
+#main ul li.blog.resolved, 
+#main ul li.blog.ignored {
+	background: #edeff1 url(../images/icons/messages/blog_resolved.png) 10px 7px no-repeat;
+}
+
+#main ul li.message_comment {
+	background: url(../images/icons/messages/comment.png) 10px 8px no-repeat;
+}
+
+#main ul li.message_comment.resolved, 
+#main ul li.message_comment.ignored {
+	background: #edeff1 url(../images/icons/messages/comment_resolved.html) 10px 9px no-repeat;
+}
+
+#main ul li.message_reply {
+	background: url(../images/icons/messages/reply.png) 10px 9px no-repeat;
+}
+
+#main ul li.message_reply.resolved, 
+#main ul li.message_reply.ignored {
+	background: #edeff1 url(../images/icons/messages/reply_resolved.html) 10px 9px no-repeat;
+}
+
+#content #main ul li.message ul {
+	border: none;
+	margin: 0 6px 0 0;
+}
+
+#content #main ul li.message ul li.rate_positive a,
+#content #main ul li.message ul li.rate_negative a,
+#content #main ul li.message ul li.dismiss a,
+#content #main ul li.message ul li.rate_positive,
+#content #main ul li.message ul li.rate_negative,
+#content #main ul li.message ul li.dismiss {
+  margin: 0;
+  padding: 0;
+  width: 37px;
+}
+
+#content #main ul li.message ul li.rate_positive a {
+	background: url(../images/buttons/rating.png) 0 -27px no-repeat;
+}
+#content #main ul li.message.positive ul li.rate_positive a,
+#content #main ul li.message ul li.rate_positive a:hover,
+#content #main ul li.message ul li.rate_positive a:focus {
+	background: url(../images/buttons/rating.png) 0 0 no-repeat;
+}
+
+#content #main ul li.message ul li.rate_positive a:active {
+	background: url(../images/buttons/rating.png) 0 -54px no-repeat;  
+}
+
+
+#content #main ul li.message ul li.rate_negative a {
+	background: url(../images/buttons/rating.png) -74px -27px no-repeat;
+}
+#content #main ul li.message.negative ul li.rate_negative a,
+#content #main ul li.message ul li.rate_negative a:hover,
+#content #main ul li.message ul li.rate_negative a:focus {
+	background: url(../images/buttons/rating.png) -74px 0 no-repeat;
+}
+
+#content #main ul li.message ul li.rate_negative a:active {
+  	background: url(../images/buttons/rating.png) -74px -54px no-repeat;
+}
+
+#content #main ul li.message ul li.dismiss a {
+	background: url(../images/buttons/rating.png) -37px -27px no-repeat;
+}
+#content #main ul li.message.ignored ul li.dismiss a,
+#content #main ul li.message ul li.dismiss a:hover,
+#content #main ul li.message ul li.dismiss a:focus {
+	background: url(../images/buttons/rating.png) -37px 0 no-repeat;
+}
+
+#content #main ul li.message ul li.dismiss a:active {
+  background: url(../images/buttons/rating.png) -37px -54px no-repeat;
+}
+
+/* message page -|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|- */
+
+#main #message_discussion .meta {
+	line-height: 36px;
+	padding: 0 0 0 105px;
+}
+
+#main .meta.message {
+	background: url(../images/icons/messages/tweet.png) 10px 50% no-repeat;
+}
+#main .meta.video {
+	background: url(../images/icons/messages/video.png) 10px 50% no-repeat;
+}
+#main .meta.blog {
+	background: url(../images/icons/messages/blog.png) 10px 50% no-repeat;
+}
+
+#content #main h3 {
+	padding: 0 10px;
+}
+
+#content #main .credit {
+	padding: 10px;
+}
+
+#content .discussion {
+	margin: 10px 10px 0 10px;
+	padding: 10px;
+	background: #f3f6f7;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+}
+
+#content .discussion ul#comments li {
+	border-bottom: 1px solid #b0c0c5;
+	padding: 0 0 15px 0;
+}
+
+#content .discussion ul#comments li.flagged {
+	background: url(../images/icons/discussions/flagged.png) 100% .6em no-repeat;
+}
+
+#content .discussion ul#comments li.accepted {
+	background: url(../images/icons/discussions/accepted.html) 100% .6em no-repeat;
+}
+
+#content .discussion ul#comments li.resolved, 
+#content .discussion ul#comments li.ignored {
+	background: url(../images/icons/discussions/resolved.png) 100% .5em no-repeat;
+}
+
+#content .discussion ul#comments li img {
+	margin: 1em 0 0 0;
+}
+
+#content #main #comments .comment,
+#content #main #comments .author {
+	padding-left: 12px;
+}
+
+#content #main #comments .comment {
+
+}
+
+#content #main #comments .comment p {
+	padding: 0 0 0px 0;
+	font-size: 1em;
+	margin: 5px 0 0 0;
+}
+
+#content #main #comments .author {
+	margin: 1em 0 0 0 ;
+}
+
+#content #main #message_state .meta {
+	padding: 10px 0;
+}
+
+#content #main #message_state ul li {
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+#content #main #message_state ul li a {
+	height: 37px;
+	display: block;
+	margin-right: 10px;
+	padding-left: 123px;
+	text-indent: -9999px;
+	text-decoration: none;
+}
+
+#content #main #message_state ul li a span{
+	display: block;
+	height: 37px;
+}
+
+#content #main ul#rate_message {
+	height: 156px;
+	background: url(../images/icons/messages/states/rating.png) 0 0 no-repeat;
+	border-bottom: 1px solid #dedede;
+	padding-bottom: 20px;
+}
+
+#content #main ul#change_status {
+	height: 100px;
+}
+
+#content #main ul#change_status #or {
+	text-align: center;
+	color: #95A3AB;
+	font-weight: bold;
+}
+
+#content #main ul#rate_message li {
+	margin-bottom: 22px;
+}
+
+#content #main ul#change_status li {
+	margin-bottom: 6px;
+}
+
+#content #main #message_state ul li#positive a span {
+	background: url(../images/buttons/messages/states/positive.png) 100% 100% no-repeat;
+}
+#content #main #message_state ul li#positive a {
+	background: url(../images/buttons/messages/states/positive.png) 0 100% no-repeat;
+}
+#content #main .message.positive #message_state ul li#positive a span,
+#content #main #message_state ul li#positive a:hover span {
+	background: url(../images/buttons/messages/states/positive.png) 100% 0 no-repeat;
+}
+#content #main .message.positive #message_state ul li#positive a,
+#content #main #message_state ul li#positive a:hover {
+	background: url(../images/buttons/messages/states/positive.png) 0 0 no-repeat;
+}
+
+#content #main #message_state ul li#neutral a span {
+	background: url(../images/buttons/messages/states/neutral.png) 100% 100% no-repeat;
+}
+#content #main #message_state ul li#neutral a {
+	background: url(../images/buttons/messages/states/neutral.png) 0 100% no-repeat;
+}
+#content #main .message.neutral #message_state ul li#neutral a span,
+#content #main #message_state ul li#neutral a:hover span {
+	background: url(../images/buttons/messages/states/neutral.png) 100% 0 no-repeat;
+}
+#content #main .message.neutral #message_state ul li#neutral a,
+#content #main #message_state ul li#neutral a:hover {
+	background: url(../images/buttons/messages/states/neutral.png) 0 0 no-repeat;
+}
+
+#content #main #message_state ul li#negative a span {
+	background: url(../images/buttons/messages/states/negative.png) 100% 100% no-repeat;
+}
+#content #main #message_state ul li#negative a {
+	background: url(../images/buttons/messages/states/negative.png) 0 100% no-repeat;
+}
+#content #main .message.negative #message_state ul li#negative a span,
+#content #main #message_state ul li#negative a:hover span {
+	background: url(../images/buttons/messages/states/negative.png) 100% 0 no-repeat;
+}
+#content #main .message.negative #message_state ul li#negative a,
+#content #main #message_state ul li#negative a:hover {
+	background: url(../images/buttons/messages/states/negative.png) 0 0 no-repeat;
+}
+
+#content #main #message_state ul li#flagged a span {
+	background: url(../images/buttons/messages/states/flagged.html) 100% 100% no-repeat;
+}
+#content #main #message_state ul li#flagged a {
+	background: url(../images/buttons/messages/states/flagged.html) 0 100% no-repeat;
+}
+#content #main .message.flagged #message_state ul li#flagged a span,
+#content #main #message_state ul li#flagged a:hover span {
+	background: url(../images/buttons/messages/states/flagged.html) 100% 0 no-repeat;
+}
+#content #main .message.flagged #message_state ul li#flagged a,
+#content #main #message_state ul li#flagged a:hover {
+	background: url(../images/buttons/messages/states/flagged.html) 0 0 no-repeat;
+}
+
+#content #main #message_state ul li#accepted a span {
+	background: url(../images/buttons/messages/states/accepted.html) 100% 100% no-repeat;
+}
+#content #main #message_state ul li#accepted a {
+	background: url(../images/buttons/messages/states/accepted.html) 0 100% no-repeat;
+}
+#content #main .message.accepted #message_state ul li#accepted a span,
+#content #main #message_state ul li#accepted a:hover span {
+	background: url(../images/buttons/messages/states/accepted.html) 100% 0 no-repeat;
+}
+#content #main .message.accepted #message_state ul li#accepted a,
+#content #main #message_state ul li#accepted a:hover {
+	background: url(../images/buttons/messages/states/accepted.html) 0 0 no-repeat;
+}
+
+#content #main #message_state ul li#resolved a span {
+	background: url(../images/buttons/messages/states/resolved.png) 100% 100% no-repeat;
+}
+#content #main #message_state ul li#resolved a {
+	background: url(../images/buttons/messages/states/resolved.png) 0 100% no-repeat;
+}
+#content #main .message.resolved #message_state ul li#resolved a span,
+#content #main #message_state ul li#resolved a:hover span {
+	background: url(../images/buttons/messages/states/resolved.png) 100% 0 no-repeat;
+}
+#content #main .message.resolved #message_state ul li#resolved a,
+#content #main #message_state ul li#resolved a:hover {
+	background: url(../images/buttons/messages/states/resolved.png) 0 0 no-repeat;
+}
+
+#content #main #message_state ul li#ignored a span {
+	background: url(../images/buttons/messages/states/ignored.png) 100% 100% no-repeat;
+}
+#content #main #message_state ul li#ignored a {
+	background: url(../images/buttons/messages/states/ignored.png) 0 100% no-repeat;
+}
+#content #main .message.ignored #message_state ul li#ignored a span,
+#content #main #message_state ul li#ignored a:hover span {
+	background: url(../images/buttons/messages/states/ignored.png) 100% 0 no-repeat;
+}
+#content #main .message.ignored #message_state ul li#ignored a,
+#content #main #message_state ul li#ignored a:hover {
+	background: url(../images/buttons/messages/states/ignored.png) 0 0 no-repeat;
+}
+
+body.external #header #navigation {
+	height: 10px;
+	border-bottom: 1px solid #787878;
+}
+
+#content #main .blankslate {
+	font-size: 1.9em;
+	color: #696969;
+	font-weight: bold;
+	padding: 10px 10px 100px 10px;
+}
+
+/* Announcement */
+
+#announcement {
+  background: transparent;
+  margin: 0 15px;
+}
+
+#announcement {
+  background: #b4c5ce url(../images/flash_success.png) top left repeat-x ;
+  color: #1f2223;
+  font-weight: bold;
+  margin: 0 15px 10px 15px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+
+#announcement p {
+  padding: 12px 16px 12px 36px;
+  font-size: 13px;	
+  background: transparent url(../images/announcement_icon.png) left center no-repeat;
+}
+
+#announcement .hide {
+  float: right;
+  margin: 16px;
+}
+
+/* The Flash */
+
+#flash {
+	background: transparent;
+	margin: 0 15px;
+}
+
+#flash #flash_notice,
+#flash #flash_failure {
+	background: #b4c5ce url(../images/flash_success.png) top left repeat-x ;
+	color: #1f2223;
+	font-weight: bold;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	margin: 0 0 0px 0;
+	margin: 0 0 0px 0;
+	*margin: 0 0 10px 0; /*IE7*/
+}
+
+#flash #flash_notice p,
+#flash #flash_failure p {
+  padding: 12px 16px 12px 36px;
+  font-size: 13px;	
+  background: transparent url(../images/flash_info_icon.png) left center no-repeat;  
+} 
+
+#flash #flash_helper,
+#flash #flash_success {
+	background: #b4c5ce url(../images/flash_success.png) top left repeat-x ;
+	color: #1f2223;
+	font-weight: bold;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	margin: 0 0 0px 0;
+}
+
+#flash #flash_helper p,
+#flash #flash_success p {
+  padding: 12px 16px;
+  font-size: 13px;
+}
+
+#flash #flash_success p {
+  background: transparent url(../images/flash_success_check.png) left center no-repeat;
+  padding: 12px 16px 12px 36px;
+}
+
+/*************************************
++Footer
+*************************************/
+
+#footer {
+	padding: 2px 17px 2px 22px;
+	font-size: 10px;
+	color: #353d42;
+	margin-top: 10px;
+}
+
+#footer a, #footer a:visited {
+	color: #353d42;
+	font-weight: bold;
+}
+
+#footer a:hover {color: #353d42;}
+
+ul#footer li {
+	display: inline;
+}
+
+#footer .vercial_line {
+	padding: 0 6px;
+}
+#footer .service {
+	background: #cad9e2;
+	padding: 7px 14px;
+	margin: 0 20px 10px 0;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	display: inline-block;
+	*width: 25%; /*IE7*/
+}
+
+/*************************************
++General Pagination
+*************************************/
+
+
+.pagination{
+	background: #fff;
+	padding: 20px 8px 14px 14px;
+	text-align: right;
+}
+
+
+.pagination  .disabled {
+	border: 1px solid #e1e1e1;
+	padding: 5px 8px;
+	color: #e1e1e1;
+	font-weight: bold;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+.pagination .current {
+	color: #fff;
+	background: #145597;
+	font-weight: bold;
+	padding: 5px 8px;
+	border: 1px solid #145597;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+.pagination a {
+	font-weight: bold;
+	text-decoration: none;
+	color: #232323;
+	padding: 5px 8px;
+	border: 1px solid #94aec9;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+#content .pagination a:hover {
+	color: #fff;
+	background: #145597;
+	border: 1px solid #145597;
+}
+
+
+/*************************************
++Info List
+*************************************/
+
+#record_list {
+	padding: 15px 15px 0 15px;
+}
+
+.record_item img {
+	float: left;
+	margin: 0 10px 0 0;
+	padding: 2px 2px 2px 6px;
+	}
+
+.record_item {
+	border-bottom: 1px solid #e1e1e1;
+	clear: both;
+	margin: 0 0 10px 0;
+	padding: 0 0 10px 0;
+}
+
+.record_info h5 {
+	font-size: 1.7em;
+	padding: 5px 0 0 0;
+	margin: 0 0 3px 0;
+}
+
+.record_info span {
+	font-size: 1.3em;
+	xfont-weight: bold;
+	color: #656565;
+}
+
+.record_info {
+	float: left;
+	padding: 5px 0 0 0;
+}
+
+#record_index_header h2 {
+  padding: 0;
+  margin: 0;
+  line-height: normal;
+  float: left;
+  width: 50%;
+}
+
+#record_index_header {
+  border-bottom: 1px solid #e1e1e1;
+  margin: 0 0 10px 0;
+  padding: 3px 0 10px 0;
+}
+
+#record_index_header .new_record a {
+  text-align: right;
+  float: right;
+  font-size: 1.6em;
+  font-weight: bold;
+  padding: 6px 0 5px 27px;
+  xdisplay: block;
+  background: #fff url(../images/icons/brands/add_brand.png) left center no-repeat;
+}
+
+/* Plans */
+
+.trial_info {
+  background: #cad9e2;
+  padding: 14px;
+  margin: 15px 0 10px 0;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  font-size: 1.4em;
+  line-height: 1.4em;
+  vertical-align: middle;
+  color: #232323;
+}
+
+.billing_info {
+  background: #d4e2ea;
+  padding: 14px;
+  margin: 15px 0 10px 0;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  font-size: 1.4em;
+  line-height: 1.4em;
+  vertical-align: middle;
+  color: #232323;
+  border: 1px solid #bdcdd7;
+}
+
+.plan_name {
+  font-weight: bold;
+}
+
+.billing_info .money {
+  font-weight: bold;
+}
+
+#delete_brand {
+  float: right;
+	width: 117px;
+	height: 25px;
+	position: relative;
+	top: -17px;
+}
+#delete_brand a {
+
+	width: 117px;
+	height: 25px;
+  display: block;
+  text-indent: -9999px;
+  text-decoration: none;
+  background: url(../images/buttons/delete_brand.png) 0 0 no-repeat;
+}
+
+.twitter_header {
+  color:#333333;
+  font-size:2.3em;
+  font-weight:bold;
+  text-align: center;
+  padding: 20px 20px 5px 20px;
+}
+
+.twitter_header span {
+  text-decoration: underline;
+}
+
+.additional_data {
+  margin: 15px 0 5px 0;
+  padding: 10px 20px;
+  background: #f4f4f4 url(../images/shadow_indent.png) top left repeat-x;
+  border-top: 1px solid #c8c8c8;
+  border-left: 1px solid #dbdbdb;
+  border-right: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb; 
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px; 
+}
+
+.modal #content #wrap #main .additional_data ol {
+  font-size: 1.0em;
+  color: #727272;
+}
+
+.modal #content #wrap #main .additional_data ol li {
+  margin: 0 0 10px 0;
+}
+
+.plan_details {
+  -moz-border-radius:9px;
+  -webkit-border-radius:9px;  
+  background:#EEEEEE none repeat scroll 0 0;
+  margin:10px 0;
+  padding:20px 20px 0;
+}
+
+#content #main .plan_details p {
+  padding: 0 0 1em 0;
+  margin: 0 0 1em 0;  
+}
+
+.plan_details .details_first {background: transparent url(../images/form_ridge.png) bottom left repeat-x;}
+
+/*************************************
++Action Buttons
+*************************************/
+
+.button_actions {
+  padding: 15px 11px 0 20px;
+}
+
+.button_actions h5 {
+  width: 35%;
+  float: left;
+  color:#333333;
+  font-size:2.3em;
+  font-weight:bold;  
+}
+
+#content div.actions {
+  padding: 0 9px 0 0;
+}
+
+.button_actions a {
+  font-size: 12px;
+  float: right;
+  padding: 0 12px 0 0;  
+}
+
+#content div.actions a {
+  color: #232323;
+  font-size: 12px;
+  font-weight: bold;
+  display: block;
+  height: 27px;
+  padding: 0 12px 0 0;
+  background: #fff url(../images/buttons/button-right.png) top right no-repeat;
+  text-decoration: none;
+}
+
+#content div.actions a:hover {text-decoration: none; cursor: hand;}
+#content div.actions a:hover span {cursor: hand;}
+
+#content div.actions a span {
+  background: transparent url(../images/buttons/button-left-plain.png) top left no-repeat;
+  display: block;
+  height: 20px;
+  padding: 7px 0 0 12px;
+  line-height: 1;
+  white-space: nowrap;  
+}
+
+#main.main_sidebar div.actions {padding: 10px 0 0 0; float: none; line-height: 1; top: 0;}
+
+#content div.actions a span.new_item      {background: transparent url(../images/buttons/button-left-new.png) top left no-repeat;   padding: 7px 0 0 31px;}
+#content div.actions a span.delete_item   {background: transparent url(../images/buttons/button-left-delete.png) top left no-repeat; padding: 7px 0 0 28px;}
+#content div.actions a span.edit_item     {background: transparent url(../images/buttons/button-left-edit.html) top left no-repeat;   padding: 7px 0 0 31px;}
+#content div.actions a span.edit_billing  {background: transparent url(../images/buttons/button-left-money.html) top left no-repeat;  padding: 7px 0 0 23px;}
+#content div.actions a span.twitter  {background: transparent url(../images/buttons/button-left-twitter.png) top left no-repeat;  padding: 7px 0 0 28px;}
+#content div.actions a span.delete_twitter  {background: transparent url(../images/buttons/button-left-delete-twitter.png) top left no-repeat;  padding: 7px 0 0 34px;}
+
+#content #wrap .dashboard_new_brand .actions {
+  float: left;
+  margin: 2px 0 0 10px;
+}
+
+.twitter_temp a{
+  display: block;
+  float: right;
+  width: 182px;
+  height: 27px;
+  text-indent: -5000px;
+  background: #fff url(../images/buttons/twitter_temp.png) top left no-repeat;
+}
+
+
+/*************************************
++ Twitter Update Slide
+*************************************/
+
+#twitter_update_slide {
+	width: 812px;
+	height: 245px;	
+	position: absolute;
+	top: 120px;
+	z-index: 1;
+	/* the follow styles make it centered */
+  left: 50%;
+  margin-left: -406px;
+}
+
+#twitter_update_top {
+	width: 812px;
+	height: 29px;
+	background: transparent url(../images/twitter_update_top.png) top left no-repeat;
+}
+
+#twitter_update_content {
+	width: 720px;
+	padding: 0 47px 10px 47px;
+	background: transparent url(../images/twitter_update_middle.png) top left repeat-y;
+}
+
+#twitter_update_bottom {
+	width: 812px;
+	height: 22px;
+	background: transparent url(../images/twitter_update_bottom.png) top left no-repeat;
+}
+
+#twitter_update_content form {
+	padding: 0;
+	background: #efefef;
+}
+
+#twitter_update_content form label {
+	display: block;
+	float: left;
+}
+
+#twitter_update_content form #response_status {
+	float: right;
+	text-align: right;
+	font-size: 1.2em;
+	font-weight: bold;
+	margin-top: 8px;
+	width: 50%;
+	color: #a43c22;
+}
+
+#twitter_update_content form label span {
+	font-size: 1.6em;
+	font-weight: bold;
+	margin: 0 4px 0 0;
+}
+
+#twitter_update_content form select {
+	font-size: 1.4em;
+	min-width: 180px;
+	position: relative;
+	top: -3px; /*helps align baseline */
+}
+
+#twitter_update_content form textarea {
+	width: 710px;
+	height: 90px;
+	padding: 5px;
+	font-family: arial, sans-serif;
+	border: 1px solid #a4a4a4;
+	font-size: 1.8em;
+	margin: 5px 0 0 0;
+}
+
+#twitter_update_content form textarea.loading {
+	background: transparent url(../images/progress.gif) no-repeat scroll 50% 50%;
+}
+
+#twitter_update_content_bottom {
+	padding: 10px 0 0 0;
+}
+
+#twitter_update_content #twitter_update_buttons {
+	width: 30%;
+	float: left;
+}
+
+#twitter_update_content #remaining_characters {
+	width: 40%;
+	float: right;
+	text-align: right;
+	font-size: 1.2em;
+	font-weight: bold;
+  color: #919191;
+}
+
+#twitter_update_content .submit_field {
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+#twitter_update_content #twitter_update_cancel {
+  float: left;
+  display: block;
+  width: 83px;
+  height: 38px;
+  background: #fff url(../images/buttons/twitter_update_cancel.png) top left no-repeat;
+  text-indent: -5000px;
+}
+
+.loader {
+  float: left;
+  margin: 15px 15px 100px 0px;
+}
+
+
+/*************************************
++Clearfix
+*************************************/
+
+.clearfix:after {
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+
+.clearfix {display:inline-block;}
+/* Hide from IE Mac \*/
+.clearfix {display:block;}
+/* End hide from IE Mac */
+
+
+
+/* General form styles */
+form {
+	padding: 5px 20px;
+	font-family: arial, helvetica, sans-serif;
+}
+
+textarea {
+  resize: none;
+}
+
+.discussion form {padding: 5px 0;}
+
+li form { padding: 0; }
+
+#content #main form fieldset p{
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+
+fieldset {
+	padding: 20px 20px 10px 20px;
+	margin: 10px 0;
+	background: #EEE;
+	-moz-border-radius: 9px;
+	-webkit-border-radius: 9px;
+}
+
+form input,
+form label {
+	vertical-align: middle;
+}
+
+form label {
+	margin: 0 0 2px 0;
+}
+
+h5.legend {
+  margin: 10px 0 5px 0;
+  font-size: 1.6em;
+}
+
+form fieldset label {
+	width: 130px;
+	font-size: 1.2em;
+	display: inline-block;
+	padding: 6px 5px 0 0;
+	text-align: right;
+	vertical-align: top;
+}
+
+#content #main .form_note {
+  color: #686868;
+  font-size: .9em;
+  padding: 0 0 0 137px;
+  width: 400px;
+  line-height: 1.3;
+  white-space: normal;
+}
+
+#content #main .checkbox {
+  margin: 0 0 10px 0;
+}
+
+.sessions-new .checkbox {
+  font-size: 1.2em;
+}
+
+
+#content #main .text_field_group .checkbox {
+  margin: 0;
+}
+
+#content #main .checkbox input {margin: 0 2px 0 0px; vertical-align: middle; }
+#content #main .checkbox label {display: inline; vertical-align: middle; padding: 1px 0 0 0; width: 350px; text-align: left;}
+
+/* new user form */
+
+#new_user #user_account_attributes_subdomain {
+  width: 33%;
+}
+
+#new_user .root_url {
+  font-size: 1.5em;
+  padding: .2em;
+  font-weight: bold;
+}
+
+#new_user fieldset {
+  margin-bottom: 30px;
+}
+/* modal page styles */
+
+.modal #main form label {
+	width: auto;
+	font-size: 1.2em;
+	vertical-align: middle;
+	display: block;
+	padding: 0;
+	text-align: left;
+	color: #232323;
+	font-weight: bold;
+}
+
+#main form  .form_helper {
+  display: block;
+  color: #6d6d6d;
+  padding: 4px 0 0 0;
+}
+
+.modal #main form label span {
+  font-weight: normal;
+  color: #6d6d6d;
+}
+
+.brands-new #main form .text_field,
+  .brands-edit #main form .text_field,
+   .text_field_group {
+      background: transparent url(../images/form_ridge.png) bottom left repeat-x;
+      padding-bottom: 15px;
+      margin-bottom:  15px;
+      }
+
+.sessions-new .text_field_group {margin-bottom: 5px;}
+
+.brands-new #main form .text_field.image_upload_field,
+  .brands-edit #main form .text_field.image_upload_field  {
+    background: none;
+    margin-bottom:  0;  
+    }
+
+
+.modal #main input[type="text"],
+.modal #main input[type="password"] {
+	font-size: 1.5em;
+	padding: 3px 2px;
+	width: 98%;
+}
+
+.modal #content #main .buttons input {
+	margin: 0 5px 0 0;
+}
+
+.text_field, .password_field {
+	margin: 0 0 10px 0;
+}
+
+.modal #content #main p.checkbox {
+	padding: 0;
+}
+
+.modal #content #main .buttons {
+	padding: 10px 0 10px 0px;
+	font-size: 1.2em;
+}
+
+.twitter_accounts-new #content #main .buttons,
+.twitter_accounts-edit #content #main .buttons {
+  text-align: center;
+}
+
+.modal #content #main {
+	width: 70%; margin: 0 auto 0 auto;
+}
+
+.modal #content h2 {
+	width: 70%;
+	margin: 0 auto;
+	float: none;
+}
+
+.users-new.modal #content #main h2 {
+	width: 100%;
+	margin: 5px 0;
+	padding: 0 10px;
+	float: none;
+}
+
+.modal #footer {
+	text-align: center;
+}
+
+/* message comment form */
+
+#content #main .discussion form {
+	margin: 1.3em 0 0 0;
+}
+
+* html #content #main .discussion form { height: 1%; }
+*:first-child+html #content #main .discussion form { min-height: 1px; }
+#content #main .discussion form:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+#content #main .discussion form img {
+	float: left;
+	margin-right: 10px;
+}
+
+#content #main .discussion form label {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	font-size: 1.3em;
+	color: #232323;
+	display: block;
+}
+
+#content #main .discussion form .textarea_field {
+	width: 80%;
+	float: left;
+}
+
+#content #main .discussion form .textarea_field textarea {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 1.4;
+	font-size: 1.3em;
+	color: #232323;
+	margin: 1em 0;
+	height: 133px;
+	width: 100%;
+}
+
+#content #main .discussion form .submit_field {
+	position: relative;
+	clear: left;
+	float: left;
+	left: 58px;
+}
+
+/* twitter quick reply form */
+#twitter_reply {
+	margin: 5px 10px;
+	height: 198px;
+	background: url(../images/twitter_reply.png) 100% 0 no-repeat;
+}
+
+#twitter_reply .reply {
+	height: 198px;
+	margin: 0 10px 0 0 ;
+	background: url(../images/twitter_reply.png) 0 0 no-repeat;
+}
+
+#twitter_reply_form form {
+	padding: 0;
+	height: 198px;
+	margin: 0 10px 0 0;
+	background: url(../images/twitter_reply.png) 0 0 no-repeat;
+}
+
+#twitter_reply_form {
+	margin: 5px 10px;
+	background: url(../images/twitter_reply.png) 100% 0 no-repeat;
+}
+
+#twitter_reply_form .textarea_field textarea {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1.6em;
+	color: #232323;
+	width: 96%;
+	margin: 0 2%;
+	height: 100px
+}
+
+#twitter_reply_form #reply_as {
+	float: left;
+	margin: 20px 0 0 14px;
+	line-height: 25px;
+}
+
+#twitter_reply_form #reply_as img {
+	vertical-align: top;
+	outline: 1px solid #a9c0c6;
+	margin: 0 .5em;
+}
+
+#twitter_reply_form #reply_as span {
+	font-size: 1.8em;
+	font-weight: 100;
+	color: #424d60;
+}
+
+#twitter_reply_form #reply_as a {
+	text-decoration: underline;
+	font-weight: bold;
+	font-size: 1.3em;
+}
+
+#twitter_reply_form #change_account {
+	margin: 20px 14px 0 0;
+	line-height: 25px;
+	float: right;
+}
+
+#twitter_reply_form #change_account a {
+	text-decoration: underline;
+	font-size: 1.1em;
+}
+
+#twitter_reply_form .submit_field {
+	margin: 0 0 0 14px;
+	line-height: 40px;
+	float: left;
+}
+#twitter_reply_form #remaining_characters {
+	color: #415054;
+	font-weight: bold;
+	font-size: 1.3em;
+	margin: 0 14px 0 0;
+	line-height: 40px;
+	float: right;
+}
+
+/* replied bit */
+#twitter_reply .reply_text,
+#twitter_reply_form .reply_text {
+	border-bottom: 1px solid #a9c0c6;
+	padding: 30px 0 10px 0;
+	font-size: 1.6em;
+	line-height: 1.5;
+	margin: 0 10px;
+	color: #232323;
+}
+
+textarea#reply_text {padding: 5px;}
+
+#twitter_reply #reply_author {
+	color: #62727b;
+	font-size: 1.3em;
+	font-weight: bold;
+	height: 60px;
+}
+
+#twitter_reply #reply_author img {
+	vertical-align: top;
+}
+
+#twitter_reply #reply_author span {
+	display: block;
+	border-top: 1px solid white;
+	margin: 0 10px;
+	padding: 15px 0 0 0;
+	line-height: 24px;
+}
+
+#twitter_reply #reply_author span a {
+	text-decoration: underline;
+}
+
+#twitter_reply_help {
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	background:#A86823 url(../images/notice_background.png) repeat-x scroll left top;
+	border-color:#824C19 #D29E37;
+	border-style:solid;
+	border-width:1px;
+	color:#3A2B1C;
+	font-size: 1.2em;
+	font-weight:bold;
+	margin:16px 10px 22px 10px;
+	padding: 12px 16px;
+	text-align: center;
+}
+
+/* Errors */
+
+#content #main .errorExplanation h2,
+#content #main .errorExplanation ul {
+	margin-left: 0;
+}
+
+#content #main .errorExplanation ul {
+	margin-bottom: 10px;
+}
+
+#content #main .errorExplanation ul li {
+	margin-left: 25px;
+	padding: 2px 0;
+}
+
+.fieldWithErrors input[type="text"],
+.fieldWithErrors input[type="password"] {
+	border-color: #c33;
+}
+
+
+table {
+  width: 96%;
+  margin: 0 auto;
+  font-size: 1.5em;
+}
+
+table th {
+	text-align: left;
+	background: #eee;
+}
+
+table tr.names th {
+  color: #FFF;
+  height: 35px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  font-family: Arial, sans-serif;
+	background: #028CC3 url(../images/th.png) 0 0 repeat-x;
+}
+
+table tr.price th,
+table tr.brands th,
+table tr.users th,
+table tr.signups th {
+	height: 55px;
+  padding: 0 1em;
+	text-align: right;
+	font-weight: normal;
+  vertical-align: middle;
+  border-right: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+}
+
+table tr.price:last-child,
+table tr.brands:last-child,
+table tr.users:last-child,
+table tr.signups:last-child {
+  border-right: none;
+}
+
+
+#tables_shadow {
+  width: 96%;
+  margin: 0 auto;
+  height: 5px;
+  background: transparent url(../images/table_shadow.png) top left repeat-x;
+  position: relative;
+  top: 39px;
+  display: block;
+  *display: none;
+  _display: none;
+}
+
+
+table td {
+	height: 55px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  border-right: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+}
+
+col {
+	background: #EDEDED;
+}
+
+col.odd {
+	background: #E7E7E7;
+}
+
+table tr.signups td a {
+  width: 83px;
+  height: 27px;
+  margin: 0 auto;
+  display: block;
+  text-indent: -9999px;
+  text-decoration: none;
+  background: url(../images/buttons/signup.png) 0 0 no-repeat;
+}
+
+table tr.signups td a:hover {background: url(../images/buttons/signup.png) 0 -27px no-repeat;}
+table tr.signups td a:active {background: url(../images/buttons/signup.png) 0 -54px no-repeat;}
+
+table#terms_help {
+	width: 100%;
+	margin: 1em 0 1em 0;
+	font-size: 1.2em;
+}
+
+table#terms_help tr th {
+	font-weight: bold;
+}
+
+table#terms_help tr td {
+  font-weight: normal;
+}
+
+table#terms_help tr th,
+table#terms_help tr td {
+  height: auto;
+  border: none;
+  text-align: left;
+  line-height: 1.5;
+  padding: .25em 1em .25em 0;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+table#terms_help tr th.op,
+table#terms_help tr td.op {
+  text-align: right;
+}
+
+table#terms_help tr.odd th,
+table#terms_help tr.odd td {
+  background: #E3E3E3;
+}

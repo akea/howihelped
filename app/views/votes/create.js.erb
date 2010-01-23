@@ -1,0 +1,9 @@
+<% if @item.is_a?(Question) %>
+  $("#nice_question").removeAttr('href');
+  $("#nice_question").next().text("<%= @question.net_votes %>");
+<% else %>
+  $("#niceanswer_<%= @answer.id %>").removeAttr('href');
+  $("#niceanswer_<%= @answer.id %>").next().text("<%= @answer.net_votes %>");
+<% end %>
+$(".score_<%= @item.user.username %>").text("<%= @item.user.karma %>");
+$("#usertip").append('<div id="flash_notice"><%= escape_javascript(flash.delete(:notice)) %></div>');

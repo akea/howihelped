@@ -1,0 +1,76 @@
+<% content_for(:show_question) do %>
+<div id="discussion" class="module-main">
+  <div class="header-left">
+    <h2 class="header">I helped! Here's how . . .</h2>
+  </div>
+
+  <div class="content">
+    <div id="question">
+      <% link_to(@question.user) do %>
+        <%= image_tag @question.user.gravatar_url, :class => "avatar" %>
+      <% end %>
+      <h1><%=h @question.title %></h1>
+      <div id="info-bar">
+        <% form_for([@question, @vote], :html => {:id => "question_vote", :class => "save"}) do |f| %><%= hidden_field_tag 'vote', 'true' %><% end %>
+        <% form_for([@question, @vote], :html => {:id => "question_flag", :class => "save"}) do |f| %><%= hidden_field_tag 'vote', 'false' %><% end %>
+        Told by <a href="<%= user_path(@question.user) %>"><%= @question.user.username %></a>
+        (<span class="score score_<%= @question.user.username %>"><%= @question.user.karma %></span><img width="8" height="8" src="/images/star.png" alt="points" class="trans-png star"/>) | posted <%= time_ago_in_words(@question.created_at) %> ago | <%= @question.answers.count %> responses |
+        <span>
+          <% unless @question.user == current_user || !logged_in? || current_user.voted_on?(@question) %>
+          <a href="#" id="nice_question">Nice!</a>
+          <% end %>
+          (<span class="score"><%= @question.net_votes %></span><img width="8" height="8" src="/images/star.png" alt="points" class="trans-png star"/>)</span>
+        </span>
+        <% unless @question.user == current_user || !logged_in? || current_user.voted_against?(@question) || current_user.level < USER_ADMIN %>
+            | <a href="#" id="flag_question">Flag</a>
+        <% end %>
+
+      </div>
+      <h4>What I did:</h4>
+      <div id="description">
+        <p><%= @question.body %></p>
+      </div>
+      <h4>How it helped me:</h4>
+      <div id="description">
+        <p><%= @question.benefit %></p>
+      </div>
+      <div id="action-bar">
+        <% if current_user.eql?(@question.user) %>
+          <span>
+            <%= link_to 'Edit Post', edit_question_path(@question) %>
+          </span>
+        <% end %>
+      </div>
+      <div id="tags">
+      </div>
+    </div>
+    <div id="disc-status">
+    </div>
+    <h2>Responses:</h2>
+
+    <div id="quiplist">
+      <% @question.answers.no_downvotes(:order => :net_votes).each do |answer| %>
+        <%= render(:partial => "response", :locals => {:answer => answer, :question => @question}) %>
+      <% end %>
+    </div>
+
+    <h2 class="respond">
+      Add a response <% if logged_in? %><a href="<%= user_path(current_user) %>"><%= current_user.username %></a><% end %>
+    </h2>
+    <% form_for([@question, @answer], :html => {:id => "new_response", :class => "save"}) do |f| %>
+      <div id="answerfield" class="yui-ac">
+        <%= f.text_area :body, :cols => "60", :rows => "4", :autocomplete => "off", :class => "yui-ac-input" %>
+      </div>
+      <div class="details-small">Style your text! <b>*strong*</b>  <i>_emphasis_</i>  <font size="smallest">--whisper--</font> "link":http://www.howihelped.com &rarr; <a href="http://www.howihelped.com">link</a>.</div>
+      <div id="submit-info">
+        <div id="preview-guidance">
+          <div class="check-your-work">
+          </div>
+          <%= f.submit 'Create', :class => "submit" %>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+</div>
+<% end %>

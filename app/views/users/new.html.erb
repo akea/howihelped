@@ -1,0 +1,58 @@
+<% content_for(:register) do %>
+  <div id="qualityask" class="qask module-main">
+    <div class="header-left">
+      <p><h2>Create an account</h2></p>
+    </div>
+    <% form_for @user do |f| %>
+      <% content_for(:errors) do %>
+        <%= f.error_messages %>
+      <% end %>
+      <div id="ask_details" class="content">
+
+        <div class="bigrow">
+          <%= f.label :username %><br />
+          <div class="form">
+            <%= f.text_field :username %>
+          </div>
+        </div>
+
+        <p>
+        <div class="bigrow">
+          <p><%= f.label :email, "Email Address" %><br /></p>
+          <div id="info-bar">
+          (never displayed, optional notifications, used for gravatar)
+          </div>
+          <div class="form">
+            <p><%= f.text_field :email %><br/></p>
+          </div>
+        </div>
+        </p>
+
+        <p>
+        <div class="bigrow">
+          <p><%= f.label :password %><br /></p>
+          <div class="form">
+            <p><%= f.password_field :password %><br/></p>
+          </div>
+        </div>
+        </p>
+
+        <p>
+        <div class="bigrow">
+          <p><%= f.label :password_confirmation, "Confirm Password" %><br /></p>
+          <div class="form">
+            <p><%= f.password_field :password_confirmation %><br/></p>
+          </div>
+        </div>
+        </p>
+
+        <div style="clear:both;">
+          <span class="next">
+            <%= submit_tag "Create my account", :class => "bigsubmit" %>
+          </span>
+        </div>
+        </div>
+    <% end %>
+  </div>
+  <%= link_to 'Back', questions_path %>
+<% end %>

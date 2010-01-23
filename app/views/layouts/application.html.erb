@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+  <title><%= h(yield(:title) || "How I Helped") %></title>
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?2.7.0/build/reset-fonts/reset-fonts.css&2.7.0/build/autocomplete/assets/skins/sam/autocomplete.css">
+  <%= stylesheet_link_tag 'helped' %>
+  <%= javascript_include_tag ['jquery-1.3.2', 'jquery.in-place-edit', 'application'] %>
+  <%= yield(:head) %>
+</head>
+
+<body>
+
+<img id="background" src="/static/images/v2/wallpaper.jpg">
+
+<div id="container">
+  <div id="header">
+    <a href ="/">
+      <img id="logo" src="/images/how_i_helped.png">
+    </a>
+    <div id="header-right">
+      <ul id="navbar"></ul>
+      <div id="banner" class="banner1"></div>      
+    </div>
+  </div>
+
+  <div id="content-container">
+    <div id="content">
+      <div id="usertip">
+        <%- flash.each do |name, msg| -%>
+          <%= content_tag :div, msg, :id => "flash_#{name}" %>
+        <%- end -%>
+        <%= yield :errors %>
+      </div>
+
+      <% if @section.eql?(:default) %>
+      <div id="ask" class="module-racer">
+        <div class="header-left">
+        </div>
+        <div class="content">
+          <div style="padding: 14px 0pt 4px; text-align: center; font-size: 146.5%; font-family: 'Trebuchet MS';">
+            <span style="margin-right: 15px; font-size: 116%;">Have you helped?</span>
+            <a class="bigsubmit" href="<%= new_question_path %>">Tell us how!</a>
+          </div>
+        </div>
+      </div>
+      <% end %>
+      <%= yield :new_question %>
+      <%= yield :edit_question %>
+      <%= yield :edit_response %>
+      <%= yield :show_question %>
+      <%= yield :show_user %>
+      <%= yield :login %>
+      <%= yield :register %>
+    <%= yield %>
+    </div>
+
+    <div id="sidebar">
+      <% if logged_in? %>
+        <div id="dashboard" class="module-plain">
+          <div class="header-left">
+              <h4 class="header">
+                <a href="<%= user_path(current_user) %>"><%= current_user.username %></a>
+              </h4>
+              <p class="tagline">Thanks for helping!</p>
+              <p class="logoutlink"><%= link_to "Log out", logout_path %></p>
+          </div>
+          <div class="content">
+            <div id="activity">
+              <p>Your posts so far: <%= current_user.questions.count %></p>
+              <p>Your responses so far: <%= current_user.answers.count %></p>
+            </div>
+            <div class="account">
+              <% link_to(current_user) do %>
+                <%= image_tag current_user.gravatar_url, :class => "avatar" %>
+              <% end %>
+            </div>
+            <div class="score">
+              <a href="<%= user_path(current_user) %>"><%= current_user.username %></a>&nbsp;(<span><%= current_user.karma %></span><%= image_tag("star.png") %>)
+            </div>
+          </div>
+        </div>
+       <% else %>
+        <div id="login-container" style="">
+          <div id="login" class="module-plain loggedout">
+            <div class="header-left">
+              <div class="header">
+                <div class="header-internal">
+                  <h3 class="header"><%= link_to "Sign up", signup_path %>/<%= link_to "Sign in", login_path %></h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       <% end %>
+    </div>
+  </div>
+  <div id="footer">
+    <ul class="nav">
+    </ul>
+    <p class="copyright">Copyright @2009</p>
+  </div>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7438615-3");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

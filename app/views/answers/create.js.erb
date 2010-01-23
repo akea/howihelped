@@ -1,0 +1,5 @@
+$("#quiplist").append("<%= escape_javascript(render(:partial => "questions/response", :locals => {:answer => @answer, :question => @question})) %>");
+$("#new_response")[0].reset();
+
+
+

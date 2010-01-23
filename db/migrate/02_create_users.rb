@@ -1,0 +1,20 @@
+class CreateUsers < ActiveRecord::Migration
+  def self.up
+    create_table :users do |t|
+      t.string :username
+      t.string :email
+      t.string :password_hash
+      t.string :password_salt
+      t.integer :level, :default => USER_INTRO
+      t.string :invite
+      t.string :user_agent
+      t.string :user_ip
+      t.string :referrer
+      t.timestamps
+    end
+  end
+  
+  def self.down
+    drop_table :users
+  end
+end

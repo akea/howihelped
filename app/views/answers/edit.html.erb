@@ -1,0 +1,28 @@
+
+<% content_for(:edit_response) do %>
+  <div id="qualityask" class="qask module-main">
+    <div class="header-left">
+      <h2>Edit your response</h2>
+    </div>
+    <% form_for([@question, @answer]) do |f| %>
+      <% content_for(:errors) do %>
+        <%= f.error_messages %>
+      <% end %>
+      <div id="ask_details" class="content">
+
+        <div class="bigrow">
+          <div class="form tall-frame">
+          <%= f.text_area :body, :rows => 8, :cols => 60 %></textarea>
+          </div>
+        </div>
+
+        <div style="clear:both;">
+          <span class="next">
+            <%= f.submit 'Update', :class => "bigsubmit" %>
+          </span>
+        </div>
+        </div>
+    <% end %>
+  </div>
+  <%= link_to 'Back To The Question', question_path(@question) %>
+<% end %>

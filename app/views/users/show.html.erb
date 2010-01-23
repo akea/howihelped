@@ -1,0 +1,113 @@
+<% content_for(:show_user) do %>
+
+<div class="summary module-plain">
+  <div class="header-left">
+    <h3 class="header"></h3>
+  </div>
+  <div class="content">
+    <div class="avatar-holder">
+    </div>
+
+    <ul class="stats-holder">
+      <li>Last Visit: <%= @user.updated_at.strftime("%B %d, %Y") %></li>
+      <li>Member Since: <%= @user.created_at.strftime("%B %d, %Y") %></li>
+      <li>Reports Written: <%= @user.questions.count %></li>
+      <li>Responses Written: <%= @user.answers.count %></li>
+    </ul>
+
+    <div class="name-holder">
+      <span class="h4"><%= @user.username %></span>
+    </div>
+
+    <div class="badge-holder">
+      (<span class="score"><%= @user.karma %></span><img width="8" height="8" src="/images/star.png" alt="points" class="trans-png star"/>)
+    </div>
+    <div class="profile-holder">
+    </div>
+  </div>
+</div>
+
+<div id="ext-profile" class="module-aux nice-h">
+  <div class="header-left">
+  </div>
+
+  <div class="header-left">
+    <h2 class="header"><%= @user.username %>’s profile</h2>
+  </div>
+
+<div class="content">
+
+    <div class="ext-profile-link">
+        <% link_to(@user) do %>
+          <%= image_tag @user.gravatar_url %>
+        <% end %>
+    </div>
+
+    <h3> About <%= @user.username %> </h3>
+
+<div class="browsehowihelped">
+
+  <h3>
+  <%= @user.username %>’s activity
+  </h3>
+</div>
+
+<h3>Reports you've made:</h3>
+<ul class="disc-list">
+  <% row_class = "row1" %>
+  <% for question in @user.questions %>
+    <% if row_class.eql?("row1")%>
+      <li class="#{row_class}">
+      <% row_class = "row2" %>
+    <% else %>
+      <li class="#{row_class}">
+      <% row_class = "row1" %>
+    <% end %>
+      <div class="since"><%= time_ago_in_words(question.created_at) %> ago</div>
+      <h4><%= link_to "#{question.title}", question %></a></h4>
+      <span class="smallbar">
+        Instant Karma (<span class="score"><%= question.net_votes %></span><img width="8" height="8" src="/images/star.png" alt="points" class="trans-png star"/>)
+      </span>
+    </li>
+  <% end %>
+</ul>
+
+<h3>Reports you've responded to:</h3>
+  <ul class="disc-list">
+    <% row_class = "quip1" %>
+    <% for answer in @user.answers %>
+      <% if row_class.eql?("quip1")%>
+        <li class="#{row_class}">
+        <% row_class = "quip2" %>
+      <% else %>
+        <li class="#{row_class}">
+        <% row_class = "quip1" %>
+      <% end %>
+        <div class="since"><%= time_ago_in_words(answer.created_at) %> ago</div>
+        <h4><%= link_to "#{answer.question.title}", answer.question %></a></h4>
+        <div class="quip">
+          <%= answer.body %>
+        </div>
+
+        <span class="smallbar">
+          Instant Karma (<span class="score"><%= answer.net_votes %></span><img width="8" height="8" src="/images/star.png" alt="points" class="trans-png star"/>)
+        </span>
+      </li>
+    <% end %>
+  </ul>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+<% end %>

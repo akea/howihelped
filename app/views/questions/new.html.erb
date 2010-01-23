@@ -1,0 +1,52 @@
+<% content_for(:new_question) do %>
+  <div id="qualityask" class="qask module-main">
+    <div class="header-left">
+      <h2>Tell the world how you helped!</h2>
+    </div>
+    <% form_for(@question) do |f| %>
+      <% content_for(:errors) do %>
+        <%= f.error_messages %>
+      <% end %>
+      <div id="ask_details" class="content">
+        <div class="bighelp">
+          <h2>Talk about an occasion where you helped someone.</h2>
+          <ul class="bullet">
+            <li>It can be as simple or as complex as you like.</li>
+            <li>Describe what benefits you got from this activity.</li>
+            <li>Inspire others with your story.</li>
+          </ul>
+        </div>
+
+        <div class="bigrow">
+          <%= f.label :Summary %><br />
+          <div class="form">
+            <%= f.text_field :title %>
+          </div>
+        </div>
+
+        <p>
+        <div class="bigrow">
+          <p><%= f.label :"How did you help?" %><br /></p>
+          <div class="form tall-frame">
+          <%= f.text_area :body, :rows => 8, :cols => 60 %></textarea>
+          </div>
+        </div>
+
+        <p>
+        <div class="bigrow">
+          <p><%= f.label :"How did it help you?" %><br /></p>
+          <div class="form tall-frame">
+          <%= f.text_area :benefit, :rows => 8, :cols => 60 %></textarea>
+          </div>
+        </div>
+
+        <div style="clear:both;">
+          <span class="next">
+            <%= f.submit 'Create', :class => "bigsubmit" %>
+          </span>
+        </div>
+        </div>
+        <div class="details-small">Style your text! <b>*strong*</b>  <i>_emphasis_</i>  <font size="smallest">--whisper--</font> "link":http://www.howihelped.com &rarr; <a href="http://www.howihelped.com">link</a>.</div>
+    <% end %>
+  </div>
+<% end %>

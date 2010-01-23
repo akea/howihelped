@@ -1,0 +1,7 @@
+<% @questions.each do |question| %>
+  <li class="row2">
+  <h4><%= link_to "#{question.title}", question %></a></h4>
+  <span class="smalltext"><a href="/users/<%=h question.user.username %>/"><%=h question.user.username %></a>	 | <%=h question.answers.count %> responses
+  </span>
+<% end %>
+

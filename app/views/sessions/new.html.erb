@@ -1,0 +1,34 @@
+<% content_for(:login) do %>
+  <div id="qualityask" class="qask module-main">
+    <div class="header-left">
+      <p><h2>Sign in</h2></p>
+      <p><h2>Don't have an account? <%= link_to "Sign up!", signup_path %></h2></p>
+    </div>
+    <% form_tag sessions_path do %>
+      <div id="ask_details" class="content">
+
+        <div class="bigrow">
+          <%= label_tag :login, "Username or Email Address" %><br />
+          <div class="form">
+            <%= text_field_tag :login, params[:login] %>
+          </div>
+        </div>
+
+        <p>
+        <div class="bigrow">
+          <p><%= label_tag :password %><br /></p>
+          <div class="form">
+          <%= password_field_tag :password %>
+          </div>
+        </div>
+
+        <div style="clear:both;">
+          <span class="next">
+            <%= submit_tag "Log in", :class => "bigsubmit" %>
+          </span>
+        </div>
+        </div>
+    <% end %>
+  </div>
+  <%= link_to 'Back', questions_path %>
+<% end %>
