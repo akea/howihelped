@@ -3,6 +3,8 @@
 
 HowIHelped is a social discussion site focused on altruism. 
 
+http://www.howihelped.com
+
 == About:
 
 HowIHelped aims to give users a place to report altruistic acts they have engaged in amid a community with the ability to respond to those reports and engage in discussion about them. 
@@ -29,7 +31,6 @@ The use of the RedCloth gem enables users to format the text of their posts and 
 
 The site also has the capability, through a geolocation feature, to allow users in the same geographic area to contact others in their area who are engaged in altruism as a means of encouraging local networking around altruistic acts.
 
-http://www.howihelped.com
-
+---
 (c) Copyright 2008 A Kearney, released under MIT License.
 
