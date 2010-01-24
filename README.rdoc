@@ -15,6 +15,10 @@ HowIHelped aims to give users a place to report altruistic acts they have engage
 
 A profile page allows the user and the communnity to track each user's activity on the site by reporting their posts and their responses to the posts of others as well as their "Instant Karma" score.
 
+<b>Ajax Discussions</b>
+
+In order to make the flow of discussion as seamless as possible, when a user responds to a post this takes place via Ajax to ensure that the flow of a real-time discussion is not broken by page refreshes.
+
 <b>Ajax Voting & Instant Karma Scores</b>
 
 An Ajax (through jQuery rather than RJS) voting system applied both to posts and responses allows users to provide encouraging feedback to other users, adding to their accumulated Instant Karma. Because only upvoting is allowed by regular users to avoid the negativity found on sites with two-way voting, an additional flagging feature exists which is accessible only by an administrator or higher-level user who has achieved a degree of trust on the site. 
@@ -32,5 +36,6 @@ The use of the RedCloth gem enables users to format the text of their posts and 
 The site also has the capability, through a geolocation feature, to allow users in the same geographic area to contact others in their area who are engaged in altruism as a means of encouraging local networking around altruistic acts.
 
 ---
+
 (c) Copyright 2008 A Kearney, released under MIT License.
 
