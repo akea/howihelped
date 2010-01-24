@@ -3,9 +3,11 @@
 
 HowIHelped is a social discussion site focused on altruism. 
 
-== About
+== About:
 
 HowIHelped aims to give users a place to report altruistic acts they have engaged in amid a community with the ability to respond to those reports and engage in discussion about them. 
+
+== Features:
 
 <b>Activity Tracking</b>
 
