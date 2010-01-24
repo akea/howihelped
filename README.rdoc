@@ -25,7 +25,7 @@ An Ajax (through jQuery rather than RJS) voting system applied both to posts and
 
 <b>Gravatars & Identicons</b>
 
-A user can further personalize their experience by associating a gravatar image with the email address they sign up with. Otherwise a unique identicon image will be generated to allow them to be visually recognized on the site. 
+A user can further personalize their experience by associating a gravatar image with the email address they sign up with, thanks to the Gravtastic gem. In the absence of that association, a unique identicon graphic will be generated to allow them to be visually recognized on the site. 
 
 <b>Textile Formatting</b>
 
@@ -33,7 +33,7 @@ The use of the RedCloth gem enables users to format the text of their posts and 
 
 <b>Geolocation</b>
 
-The site also has the capability, through a geolocation feature, to allow users in the same geographic area to contact others in their area who are engaged in altruism as a means of encouraging local networking around altruistic acts.
+The site also has the capability, through a geolocation feature made possible by the geoip_city gem and GeoLiteCity database, to allow users in the same geographic area to contact each other, with the goal of encouraging local networking around altruistic endeavors.
 
 ---
 
