@@ -14,7 +14,7 @@
         <% form_for([@question, @vote], :html => {:id => "question_vote", :class => "save"}) do |f| %><%= hidden_field_tag 'vote', 'true' %><% end %>
         <% form_for([@question, @vote], :html => {:id => "question_flag", :class => "save"}) do |f| %><%= hidden_field_tag 'vote', 'false' %><% end %>
         Told by <a href="<%= user_path(@question.user) %>"><%= @question.user.username %></a>
-        (<span class="score score_<%= @question.user.username %>"><%= @question.user.karma %></span><img width="8" height="8" src="/images/star.png" alt="points" class="trans-png star"/>) | posted <%= time_ago_in_words(@question.created_at) %> ago | <%= @question.answers.count %> responses |
+        (<span class="score score_<%= @question.user.username %>"><%= @question.user.karma %></span><img width="8" height="8" src="/images/star.png" alt="points" class="trans-png star"/>) | <%= @question.city %>, <%= @question.country_name %> | posted <%= time_ago_in_words(@question.created_at) %> ago | <%= @question.answers.count %> responses |
         <span>
           <% unless @question.user == current_user || !logged_in? || current_user.voted_on?(@question) %>
           <a href="#" id="nice_question">Nice!</a>
@@ -37,7 +37,9 @@
       <div id="action-bar">
         <% if current_user.eql?(@question.user) %>
           <span>
+            <% if @question.created_at > 30.minutes.ago %>
             <%= link_to 'Edit Post', edit_question_path(@question) %>
+            <% end %>
           </span>
         <% end %>
       </div>

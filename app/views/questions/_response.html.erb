@@ -10,7 +10,7 @@
           <% form_for([answer.question, answer, answer.votes.new], :html => {:id => "answerflag_#{answer.id}", :class => "save"}) do |f| %><%= hidden_field_tag 'vote', 'false' %><% end %>
           <span class="qspan">
             <a href="<%= user_path(answer.user) %>"><%= answer.user.username %></a>
-            (<span class="score score_<%= answer.user.username %>"><%= answer.user.karma %></span><img width="8" height="8" src="/images/star.png" alt="points" class="trans-png star"/>)
+            (<span class="score score_<%= answer.user.username %>"><%= answer.user.karma %></span><img width="8" height="8" src="/images/star.png" alt="points" class="trans-png star"/>) | <%= answer.city %>, <%= answer.country_name %> | posted <%= time_ago_in_words(answer.created_at) %> ago
           </span>
           <span class="qspan great-answer">
             <% unless answer.user == current_user || !logged_in? || current_user.voted_on?(answer) %>

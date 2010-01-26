@@ -4,7 +4,7 @@ body {
 	padding:0;
 	margin:0;
 	border:0;
-	background:#122738 url('/static/images/v2/wallpaper.jpg') top repeat-x;
+	background:#122738 url('/images/wallpaper.jpg') top repeat-x;
 	color: #445D6D;
 }
 
@@ -142,7 +142,7 @@ p.subscribe {
 
 /* ------- ICONS ------------------ */
 div.sound-on {
-	background-image: url('/static/images/v2/sound-on.png');
+	background-image: url('/images/sound-on.png');
 }
 
 img.star {
@@ -176,7 +176,7 @@ img.connect {
 
 .arrow {
 	float:right;
-	background-image: url('/static/images/v2/join_arrow.png');
+	background-image: url('/images/join_arrow.png');
 	width: 84px; /* should = 94 - padding-left */
 	height: 98px; /* should = 120 - padding-top  */
 	padding-top: 22px;
@@ -209,7 +209,7 @@ img.badge {
 	border-bottom: 5px #FFF;
 }
 #motd {
-	background-image: url('/static/images/v2/alert_bg.png');
+	background-image: url('/images/alert_bg.png');
 	text-align: center;
 }
 
@@ -224,14 +224,14 @@ img.badge {
 }
 
 .tabs .all a span {
-	background: url('/static/images/v2/tab_all.png') no-repeat scroll right 0;
+	background: url('/images/tab_all.png') no-repeat scroll right 0;
 	margin-left: 30px;
 }
 .tabs .all-on a {
-	background: #77a188 url('/static/images/v2/tab_all.png') no-repeat scroll 0 -31px;
+	background: #77a188 url('/images/tab_all.png') no-repeat scroll 0 -31px;
 }
 .tabs .all-on a span {
-	background: #77a188 url('/static/images/v2/tab_all.png') no-repeat scroll right -31px;
+	background: #77a188 url('/images/tab_all.png') no-repeat scroll right -31px;
 	margin-left: 30px;
 }
 
@@ -257,7 +257,7 @@ img.badge {
 	height: 35px;
 	padding: 0px 0px 0px 0px;
 	background-color: #d46503;
-	background-image: url('/static/images/v2/header_gradient.png');
+	background-image: url('/images/header_gradient.png');
 	background-repeat:repeat-x;
 
 }
@@ -265,7 +265,7 @@ img.badge {
 #shortheader {
 	height: 70px;
 	background-color: #d46503;
-	background-image: url('/static/images/v2/short_header.png');
+	background-image: url('/images/short_header.png');
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
 }
@@ -274,7 +274,7 @@ img.badge {
 	display: block;
 	width: 220px;
 	height: 70px;
-	background-image: url('/static/images/v2/short_header.png');
+	background-image: url('/images/short_header.png');
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
 }
@@ -322,7 +322,7 @@ img.badge {
 	position: absolute;
 	width: 709px;
 	height: 101px;
-	background: #376062 url('/static/images/v2/fancybanner.jpg');
+	background: #376062 url('/images/fancybanner.jpg');
 }
 
 #header .banner0 {
@@ -343,7 +343,7 @@ img.badge {
 
 #banner #next-button, #banner #prev-button, #banner #join-button {
 		position: absolute;
-		background:url('/static/images/v2/fancybanner_hovers.png');
+		background:url('/images/fancybanner_hovers.png');
 		background-repeat: no-repeat;
 		background-position: -9999px 0;
 }
@@ -400,7 +400,7 @@ img.badge {
 #content-container {
 	width: 960px;
 	background-color: #DDEEDD;
-	background-image: url('/static/images/v2/ocean_footer.png');
+	background-image: url('/images/ocean_footer.png');
 	background-position: bottom;
 	background-repeat: no-repeat;
 	overflow: hidden;
@@ -408,7 +408,7 @@ img.badge {
 }
 
 #content-container.grumpy {
-	background-image: url('/static/images/v2/ocean_footer_grumpy.png');
+	background-image: url('/images/ocean_footer_grumpy.png');
 }
 
 .wide #content {
@@ -468,7 +468,7 @@ img.badge {
 
 div.module-main, div.module-aux, div.module-plain, div.module-racer {
 	width: 100%;
-	background: #FFFFFF url('/static/images/v2/module_bl.png') bottom left no-repeat;
+	background: #FFFFFF url('/images/module_bl.png') bottom left no-repeat;
 	margin-bottom: 11px;
 
 }
@@ -485,28 +485,28 @@ div.module-aux .header-left h2 {
 }
 
 div.module-main .content, div.module-aux .content, div.module-plain .content, div.module-racer .content {
-	background: url('/static/images/v2/module_br.png') bottom right no-repeat;
+	background: url('/images/module_br.png') bottom right no-repeat;
 	overflow:hidden;
 	padding-bottom: 14px;
 }
 
 div.module-aux .header-left {
-	background: #445d6d url('/static/images/v2/bluebar_left.png') no-repeat;
+	background: #445d6d url('/images/bluebar_left.png') no-repeat;
 	border-bottom: solid 5px #CAD7D9;
 }
 
 div.module-aux h2.header {
-	background: url('/static/images/v2/bluebar_right.png') right no-repeat;
+	background: url('/images/bluebar_right.png') right no-repeat;
 	height: 48px;
 }
 
 div.module-main .header-left, div.module-racer .header-left {
-	background: #AA3F01 url('/static/images/v2/redbar_left.png') no-repeat;
+	background: #AA3F01 url('/images/redbar_left.png') no-repeat;
 	border-bottom: solid 5px #CAD7D9;
 }
 
 div.module-main h2.header, div.module-racer h2.header {
-	background: url('/static/images/v2/redbar_right.png') top right no-repeat;
+	background: url('/images/redbar_right.png') top right no-repeat;
 	height: 43px;
 }
 div.module-racer h2.header {
@@ -514,12 +514,12 @@ div.module-racer h2.header {
 }
 
 div.module-plain .header-left {
-	background: url('/static/images/v2/module_tl.png') top left no-repeat;
+	background: url('/images/module_tl.png') top left no-repeat;
 	padding-bottom: .5em;
 }
 
 div.module-plain .header {
-	background: url('/static/images/v2/module_tr.png') top right no-repeat;
+	background: url('/images/module_tr.png') top right no-repeat;
 	padding: .5em .5em 0em .5em;
 	color: #445d6d;
 }
@@ -601,66 +601,66 @@ div.module-plain .header {
 }
 
 .tabs .all a {
-	background: url('/static/images/v2/tab_all.png') no-repeat scroll 0 0;
+	background: url('/images/tab_all.png') no-repeat scroll 0 0;
 }
 .tabs .all a span {
-	background: url('/static/images/v2/tab_all.png') no-repeat scroll right 0;
+	background: url('/images/tab_all.png') no-repeat scroll right 0;
 	margin-left: 30px;
 }
 .tabs .all-on a {
-	background: #77a188 url('/static/images/v2/tab_all.png') no-repeat scroll 0 -31px;
+	background: #77a188 url('/images/tab_all.png') no-repeat scroll 0 -31px;
 }
 .tabs .all-on a span {
-	background: #77a188 url('/static/images/v2/tab_all.png') no-repeat scroll right -31px;
+	background: #77a188 url('/images/tab_all.png') no-repeat scroll right -31px;
 	margin-left: 30px;
 }
 .tabs .all a:hover {
-	background: url('/static/images/v2/tab_all.png') no-repeat scroll 0 -62px;
+	background: url('/images/tab_all.png') no-repeat scroll 0 -62px;
 }
 .tabs .all a:hover span {
-	background: url('/static/images/v2/tab_all.png') no-repeat scroll right -62px;
+	background: url('/images/tab_all.png') no-repeat scroll right -62px;
 }
 
 .tabs .myhowihelped a {
-	background: url('/static/images/v2/tab_yourhowihelped.png') no-repeat scroll 0 0;
+	background: url('/images/tab_yourhowihelped.png') no-repeat scroll 0 0;
 }
 .tabs .myhowihelped a span {
-	background: url('/static/images/v2/tab_yourhowihelped.png') no-repeat scroll right 0;
+	background: url('/images/tab_yourhowihelped.png') no-repeat scroll right 0;
 	margin-left: 38px;
 }
 .tabs .myhowihelped-on a {
-	background: #77a188 url('/static/images/v2/tab_yourhowihelped.png') no-repeat scroll 0 -31px;
+	background: #77a188 url('/images/tab_yourhowihelped.png') no-repeat scroll 0 -31px;
 }
 .tabs .myhowihelped-on a span {
-	background: #77a188 url('/static/images/v2/tab_yourhowihelped.png') no-repeat scroll right -31px;
+	background: #77a188 url('/images/tab_yourhowihelped.png') no-repeat scroll right -31px;
 	margin-left: 38px;
 }
 .tabs .myhowihelped a:hover {
-	background: url('/static/images/v2/tab_yourhowihelped.png') no-repeat scroll 0 -62px;
+	background: url('/images/tab_yourhowihelped.png') no-repeat scroll 0 -62px;
 }
 .tabs .myhowihelped a:hover span {
-	background: url('/static/images/v2/tab_yourhowihelped.png') no-repeat scroll right -62px;
+	background: url('/images/tab_yourhowihelped.png') no-repeat scroll right -62px;
 }
 
 .tabs .foryou a {
-	background: url('/static/images/v2/tab_foryou.png') no-repeat scroll 0 0;
+	background: url('/images/tab_foryou.png') no-repeat scroll 0 0;
 }
 .tabs .foryou a span {
-	background: url('/static/images/v2/tab_foryou.png') no-repeat scroll right 0;
+	background: url('/images/tab_foryou.png') no-repeat scroll right 0;
 	margin-left: 32px;
 }
 .tabs .foryou-on a {
-	background: #77a188 url('/static/images/v2/tab_foryou.png') no-repeat scroll 0 -31px;
+	background: #77a188 url('/images/tab_foryou.png') no-repeat scroll 0 -31px;
 }
 .tabs .foryou-on a span {
-	background: #77a188 url('/static/images/v2/tab_foryou.png') no-repeat scroll right -31px;
+	background: #77a188 url('/images/tab_foryou.png') no-repeat scroll right -31px;
 	margin-left: 32px;
 }
 .tabs .foryou a:hover {
-	background: url('/static/images/v2/tab_foryou.png') no-repeat scroll 0 -62px;
+	background: url('/images/tab_foryou.png') no-repeat scroll 0 -62px;
 }
 .tabs .foryou a:hover span {
-	background: url('/static/images/v2/tab_foryou.png') no-repeat scroll right -62px;
+	background: url('/images/tab_foryou.png') no-repeat scroll right -62px;
 }
 
 #browse .header .hbar {
@@ -672,7 +672,7 @@ div.module-plain .header {
 	position: relative;
 	right: 0px;
 	height:100%;
-	background: url('/static/images/v2/bluebar_right.png');
+	background: url('/images/bluebar_right.png');
 
 }
 
@@ -1188,13 +1188,13 @@ div.loggedout .header-internal {
 
 #join .header-internal {
 	height: 35px;
-	background: #464543 url('/static/images/v2/graybar.png');
+	background: #464543 url('/images/graybar.png');
 	overflow: hidden;
 }
 
 #login .header-internal {
 	height: 143px;
-	background: #464543 url('/static/images/v2/graybar_tall.png');
+	background: #464543 url('/images/graybar_tall.png');
 	overflow: hidden;
 }
 
@@ -1290,7 +1290,7 @@ div.loggedout label {
 #footer {
 	width: 960px;
 	height: 135px;
-	background-image: url('/static/images/v2/footer_bg.png');
+	background-image: url('/images/footer_bg.png');
 	background-color: #8D2D00;
 	position:relative;
 }
@@ -1460,7 +1460,7 @@ ul.nav li.newsfeed {
 	font-weight: bold;
 	background-color: #9acab3;
 	background-color: #fff;
-	/*background-image: url('/static/images/v2/stripes6.png');*/
+	/*background-image: url('/images/stripes6.png');*/
 }
 
 #disc-status span.live-status {
@@ -1637,7 +1637,7 @@ input.submit {
     color:#214751;
     cursor:pointer;
     padding:5px 10px 6px 7px; /* Links */
-    background:#d8e2e3 url('/static/images/v2/submit_bg.jpg') repeat-x left top;
+    background:#d8e2e3 url('/images/submit_bg.jpg') repeat-x left top;
 }
 input.submit:hover {
 	background-position: 0 -30px;
@@ -1674,7 +1674,7 @@ input.submit[type]{
     cursor:pointer;
     padding: 4px 15px;
     height: 38px;
-    background:#d8e2e3 url('/static/images/v2/submit_bg_large.png') repeat-x left top;
+    background:#d8e2e3 url('/images/submit_bg_large.png') repeat-x left top;
 	text-decoration: none;
 }
 
@@ -2190,7 +2190,7 @@ p.see-all, p.subscribe {
 
 .browsehowihelped {
 	margin: 8px;
-	background: #ddeedd url(/static/images/v2/wavy_background.png) no-repeat;
+	background: #ddeedd url(/images/wavy_background.png) no-repeat;
 	padding-top: 14px;
 }
 
@@ -2382,7 +2382,7 @@ ul.bullet li {
 	height:0px;
 	width:205px;
 	display:block;
-	background:transparent url('/static/images/v2/webmynd_search.png') no-repeat top left;
+	background:transparent url('/images/webmynd_search.png') no-repeat top left;
 }
 
 #webmynd:hover {
@@ -2448,34 +2448,34 @@ ul.bullet li {
 
 .level0 {
   color: #606060;
-  background: url('/static/images/v2/badges.png') left -132px;
+  background: url('/images/badges.png') left -132px;
 }
   .level0 span {
-    background: url('/static/images/v2/badges.png') right -154px;
+    background: url('/images/badges.png') right -154px;
   }
 
 .level1 {
   color: #ca4c01;
-  background: url('/static/images/v2/badges.png') left 0;
+  background: url('/images/badges.png') left 0;
 }
   .level1 span {
-    background: url('/static/images/v2/badges.png') right -22px;
+    background: url('/images/badges.png') right -22px;
   }
 
 .level2 {
   color: #ffea8f;
-  background: url('/static/images/v2/badges.png') left -44px;
+  background: url('/images/badges.png') left -44px;
 }
   .level2 span {
-    background: url('/static/images/v2/badges.png') right -66px;
+    background: url('/images/badges.png') right -66px;
   }
 
 .level3 {
   color: #ffff99;
-  background: url('/static/images/v2/badges.png') left -88px;
+  background: url('/images/badges.png') left -88px;
 }
   .level3 span {
-    background: url('/static/images/v2/badges.png') right -110px;
+    background: url('/images/badges.png') right -110px;
   }
 
 /* Firefox 2 */
