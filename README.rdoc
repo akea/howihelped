@@ -37,5 +37,5 @@ The site also has the capability, through a geolocation feature made possible by
 
 ---
 
-(c) Copyright 2008 A Kearney, released under MIT License.
+(c) Copyright 2010 A Kearney, released under MIT License.
 
